@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="col">
+        <form action="/compare" enctype="multipart/form-data" method="post">
+            <div class="m-3">
+                <h5 class="">Select two files to compare: </h5>
+
+                <div class="mt-3">
+                    <input type="file" name="file1" class="" >
+                </div>
+
+                <div class="mt-3">
+                    <input type="file" name="file2" class="">
+                </div>
+            </div>
+
+            <div class="mt-5 m-3 ">
+                <h5>What algorithm would you like to use?</h5>
+                <select name="algorithm" style="width: 10em;">
+                    <option value="" selected disabled></option>
+                    <option value="lines">Lines</option>
+                    <option value="sentences">Sentences</option>
+                    <option value="substrings">Substrings</option>
+                </select>
+            </div>
+
+            <div class="m-3">
+                <input type="number" placeholder="Length" name="length" style="width: 10em;">
+            </div>
+
+            <div class="m-3">
+                  <input type="submit" style="margin-top:4em; width: 10em;">
+            </div>
+
+
+
+
+
+
+                <!-- TODO -->
+
+        </form>
+    </div>
+
+{% endblock %}
